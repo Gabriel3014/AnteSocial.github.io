@@ -6,17 +6,13 @@ var game = {
 		chance: new Decimal(10)
 	},
 	updateHTML: function(){
-		game.replicanti.display.innerHTML = game.replicanti.amount.floor();
+		game.replicanti.display.innerHTML = " " + game.replicanti.amount.floor();
 	},
 	replicantiUpdate: function(){
 		window.setInterval(function(){
 			if(game.replicanti.amount.lte(100)){
-				console.log("first loop")
-				console.log(game.replicanti.amount.mantissa*(10^game.replicanti.amount.exponent))
-				for(i=0;i<(game.replicanti.amount.mantissa*(10^game.replicanti.amount.exponent));i++){
-					console.log("second loop")
+				for(i=0;game.replicanti.amount.lte(i);i++){
 					if(game.replicanti.chance.lt(Math.random()*100)){
-						console.log("added")
 						game.replicanti.amount.plus(1);
 						game.updateHTML()
 					}
