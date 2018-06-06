@@ -6,7 +6,7 @@ var game = {
 		chance: 10
 	},
 	updateHTML: function(){
-		game.replicanti.display.innerHTML = game.replicanti.amount;
+		game.replicanti.display.innerHTML = " " + game.replicanti.amount;
 	},
 	replicantiUpdate: function(){
 		window.setInterval(function(){
