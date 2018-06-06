@@ -12,7 +12,7 @@ var game = {
 		window.setInterval(function(){
 			if(game.replicanti.amount < 100){
 				for(i=0;i<game.replicanti.amount;i++){
-					if(Math.random()*100<game.replicanti.chance)){
+					if(Math.random()*100<game.replicanti.chance){
 						game.replicanti.amount+=1;
 						game.updateHTML()
 					}
