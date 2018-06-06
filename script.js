@@ -20,7 +20,7 @@ var game = {
 			} else if(game.replicanti.amount>100) {
 				let x = 0
 				for(i=0;i<100;i++){
-					if(Math.random()*100<game.replicanti.chance)){
+					if(Math.random()*100<game.replicanti.chance){
 						x++
 					}
 				}
