@@ -22,27 +22,25 @@ var game = {
 		game.upgrades.tickspeedPriceDisplay.innerHTML = game.upgrades.tickspeed = " replicanti";
 	},
 	replicantiUpdate: function(){
-		
-			game.updateHTML()
-			if(game.replicanti.amount < 100){
-				for(i=0;i<game.replicanti.amount;i++){
-					if(Math.random()*100<game.replicanti.chance){
-						game.replicanti.amount+=1;
-						game.updateHTML()
-					}
+		game.updateHTML()
+		if(game.replicanti.amount < 100){
+			for(i=0;i<game.replicanti.amount;i++){
+				if(Math.random()*100<game.replicanti.chance){
+					game.replicanti.amount+=1;
+					game.updateHTML()
 				}
-			} else if(game.replicanti.amount>100) {
-				let x = 0
-				for(i=0;i<100;i++){
-					if(Math.random()*100<game.replicanti.chance){
-						x++
-					}
-				}
-				game.replicanti.amount = Math.floor(game.replicanti.amount*(1+x/100))
-				game.updateHTML()
 			}
-		},game.replicanti.tickspeed)
-	
+		} else if(game.replicanti.amount>100) {
+			let x = 0
+			for(i=0;i<100;i++){
+				if(Math.random()*100<game.replicanti.chance){
+					x++
+				}
+			}
+			game.replicanti.amount = Math.floor(game.replicanti.amount*(1+x/100))
+			game.updateHTML()
+		}
+	}
 }
 
 game.upgrades.chancePriceDisplay.onclick = function(){
@@ -68,4 +66,4 @@ game.upgrades.tickspeedPriceDisplay.onclick = function(){
 	}
 }
 
-var gameLoop = window.setInterval(replicantiUpdate, game.replicanti.tickspeed)
+var gameLoop = window.setInterval(game.replicantiUpdate, game.replicanti.tickspeed)
