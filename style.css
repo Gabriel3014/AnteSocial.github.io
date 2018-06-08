@@ -7,8 +7,6 @@
   border: 2px solid black;
 }
 
-#replicate_price:hover {
-  border: 2px solid red;
-  color: white;
-  background-color:red;
+#tickspeed_price {
+  border: 2px solid black;
 }
