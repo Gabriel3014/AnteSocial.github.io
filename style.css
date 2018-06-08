@@ -8,22 +8,22 @@
 
 #replicate_chance {
   float: left;
-  width: 10%;
+  width: 20%;
 }
 
 #replicate_upgrade {
   float: left;
-  width: 10%;
+  width: 20%;
   border: 2px solid black;
 }
 
 #tickspeed {
   float: left;
-  width: 10%;
+  width: 20%;
 }
 
 #tickspeed_upgrade {
   float: left;
-  width: 10%;
+  width: 20%;
   border: 2px solid black;
 }
