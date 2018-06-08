@@ -1,3 +1,28 @@
 #replicanti_amount {
   text-align: center;
 }
+
+#main {
+  width: 100%;
+  background-color: grey;
+}
+
+#replicate_chance {
+  float: left;
+  width: 50%;
+}
+
+#replicate_upgrade {
+  float: left;
+  width: 50%;
+}
+
+#tickspeed {
+  float: left;
+  width: 50%;
+}
+
+#tickspeed_upgrade {
+  float: left;
+  width: 50%;
+}
