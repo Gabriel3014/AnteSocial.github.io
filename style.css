@@ -4,25 +4,26 @@
 
 #main {
   width: 100%;
-  background-color: grey;
 }
 
 #replicate_chance {
   float: left;
-  width: 50%;
+  width: 10%;
 }
 
 #replicate_upgrade {
   float: left;
-  width: 50%;
+  width: 10%;
+  border: 2px solid black;
 }
 
 #tickspeed {
   float: left;
-  width: 50%;
+  width: 10%;
 }
 
 #tickspeed_upgrade {
   float: left;
-  width: 50%;
+  width: 10%;
+  border: 2px solid black;
 }
