@@ -15,11 +15,11 @@ var game = {
 		tickspeedPriceDisplay: a("tickspeed_price")
 	},
 	updateHTML: function(){
-		game.replicanti.display.innerHTML = game.replicanti.amount+" ";
-		game.upgrades.chanceDisplay.innerHTML = "Replicate Chance: " + game.replicanti.chance + "%";
-		game.upgrades.chancePriceDisplay.innerHTML = game.upgrades.chance + " replicanti";
-		game.upgrades.tickspeedDisplay.innerHTML = "Tickspeed: " + game.replicanti.tickspeed;
-		game.upgrades.tickspeedPriceDisplay.innerHTML = game.upgrades.tickspeed + " replicanti";
+		game.replicanti.display.innerHTML = game.replicanti.amount.toNumber() + " ";
+		game.upgrades.chanceDisplay.innerHTML = "Replicate Chance: " + game.replicanti.chance.toNumber() + "%";
+		game.upgrades.chancePriceDisplay.innerHTML = game.upgrades.chance.toNumber() + " replicanti";
+		game.upgrades.tickspeedDisplay.innerHTML = "Tickspeed: " + game.replicanti.tickspeed.toNumber();
+		game.upgrades.tickspeedPriceDisplay.innerHTML = game.upgrades.tickspeed.toNumber() + " replicanti";
 	},
 	replicantiUpdate: function(){
 		game.updateHTML()
