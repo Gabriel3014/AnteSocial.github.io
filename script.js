@@ -22,7 +22,7 @@ var game = {
 		game.upgrades.chanceDisplay.innerHTML = "Replicate Chance: " + game.replicanti.chance + "%";
 		game.upgrades.chancePriceDisplay.innerHTML = nFormatter(game.upgrades.chance, 0) + " replicanti";
 		game.upgrades.tickspeedDisplay.innerHTML = "Tickspeed: " + game.replicanti.tickspeed;
-		game.upgrades.tickspeedPriceDisplay.innerHTML = nFormatter(game.upgrades.tickspeed,0) + " replicanti";
+		game.upgrades.tickspeedPriceDisplay.innerHTML = nFormatter(game.upgrades.tickspeed, 0) + " replicanti";
 	},
 	replicantiUpdate: function(){
 		game.updateHTML()
