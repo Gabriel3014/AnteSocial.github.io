@@ -67,7 +67,6 @@ game.upgrades.tickspeedPriceDisplay.onclick = function(){
 		clearInterval(gameLoop)
 		game.replicanti.tickspeed = (game.replicanti.tickspeed/100)*90;
 		game.updateHTML();
-		window.setInterval(gameLoop)
-		
+		gameLoop = window.setInterval(game.replicantiUpdate, game.replicanti.tickspeed)
 	}
 }
