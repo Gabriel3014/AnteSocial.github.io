@@ -1,5 +1,5 @@
 function a(id){return document.getElementById(id)};
-function b(id){return document.getElementByClassName(id)};
+function b(id){return document.getElementsByClassName(id)};
 var game = {
 	replicanti: {
 		display: a("replicanti"),
