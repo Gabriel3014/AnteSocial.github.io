@@ -18,11 +18,11 @@ var game = {
 		tickspeedPriceDisplay: a("tickspeed_price")
 	},
 	updateHTML: function(){
-		game.replicanti.display.innerHTML = game.replicanti.amount+" ";
+		game.replicanti.display.innerHTML = nFormatter(game.replicanti.amount,0)+" ";
 		game.upgrades.chanceDisplay.innerHTML = "Replicate Chance: " + game.replicanti.chance + "%";
-		game.upgrades.chancePriceDisplay.innerHTML = game.upgrades.chance + " replicanti";
+		game.upgrades.chancePriceDisplay.innerHTML = nFormatter(game.upgrades.chance, 0) + " replicanti";
 		game.upgrades.tickspeedDisplay.innerHTML = "Tickspeed: " + game.replicanti.tickspeed;
-		game.upgrades.tickspeedPriceDisplay.innerHTML = game.upgrades.tickspeed + " replicanti";
+		game.upgrades.tickspeedPriceDisplay.innerHTML = nFormatter(game.upgrades.tickspeed,0) + " replicanti";
 	},
 	replicantiUpdate: function(){
 		game.updateHTML()
@@ -46,6 +46,9 @@ var game = {
 	}
 }
 
+var gameLoop = window.setInterval(game.replicantiUpdate, game.replicanti.tickspeed)
+window.setInterval(gameLoop)
+
 game.upgrades.chancePriceDisplay.onclick = function(){
 	if(game.replicanti.amount > game.upgrades.chance){
 		if(game.replicanti.chance < 100){
@@ -68,5 +71,3 @@ game.upgrades.tickspeedPriceDisplay.onclick = function(){
 		
 	}
 }
-
-var gameLoop = window.setInterval(game.replicantiUpdate, game.replicanti.tickspeed)
