@@ -47,7 +47,6 @@ var game = {
 }
 
 var gameLoop = window.setInterval(game.replicantiUpdate, game.replicanti.tickspeed)
-window.setInterval(gameLoop)
 
 game.upgrades.chancePriceDisplay.onclick = function(){
 	if(game.replicanti.amount > game.upgrades.chance){
