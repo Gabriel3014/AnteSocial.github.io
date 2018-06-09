@@ -24,7 +24,7 @@ var game = {
 	replicantiUpdate: function(){
 		game.updateHTML()
 		if(game.replicanti.amount.lt(100)){
-			for(i=0;game.replicanti.amount.lt(i);i++){
+			for(i=0;i<Math.round(game.replicanti.amount.toNumber()).;i++){
 				if(Math.random()*100<game.replicanti.chance){
 					game.replicanti.amount+=1;
 					game.updateHTML()
