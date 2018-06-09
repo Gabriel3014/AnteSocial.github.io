@@ -71,9 +71,9 @@ game.upgrades.tickspeedPriceDisplay.onclick = function(){
 
 a("footer").onclick = function(){
 	if(game.replicanti.notation == "Standard"){
-		game.replicanti.notation = "Mixed Scientific";
+		game.replicanti.notation = "Mixed scientific";
 		game.updateHTML();
-	}else if(game.replicanti.notation == "Mixed Scientific"){
+	}else if(game.replicanti.notation == "Mixed scientific"){
 		game.replicanti.notation = "Scientific";
 		game.updateHTML();
 	} else if(game.replicanti.notation == "Scientific"){
