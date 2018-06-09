@@ -1,21 +1,3 @@
-Skip to content
- 
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- @AnteSocial
-Sign out
-2
-1 1 aarextiaokhiao/magna_numerus.js
- Code  Issues 1  Pull requests 0  Projects 1  Wiki  Insights
-magna_numerus.js/logarithmica_numerus_lite.js
-6b675b3  6 days ago
-@aarextiaokhiao aarextiaokhiao v1.15
-     
-707 lines (577 sloc)  15.4 KB
 ;(function (globalScope) {
 	'use strict';	
 	/*
