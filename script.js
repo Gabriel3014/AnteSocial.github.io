@@ -30,7 +30,7 @@ var game = {
 					game.updateHTML()
 				}
 			}
-		} else if(game.replicanti.amount.gt(100) {
+		} else if(game.replicanti.amount.gt(100)) {
 			let x = 0
 			for(i=0;i<100;i++){
 				if(game.replicanti.chance.gt(Math.random()*100){
