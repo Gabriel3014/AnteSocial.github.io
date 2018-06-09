@@ -26,7 +26,7 @@ var game = {
 		if(game.replicanti.amount.lt(100)){
 			for(i=0;i<Math.round(game.replicanti.amount.toNumber());i++){
 				if(Math.random()*100<game.replicanti.chance){
-					game.replicanti.amount.plus(1);
+					game.replicanti.amount = game.replicanti.amount.plus(1);
 					game.updateHTML()
 				}
 			}
@@ -48,9 +48,9 @@ var gameLoop = window.setInterval(game.replicantiUpdate, game.replicanti.tickspe
 game.upgrades.chancePriceDisplay.onclick = function(){
 	if(game.replicanti.amount.gt(game.upgrades.chance)){
 		if(game.replicanti.chance.lt(100)){
-			game.replicanti.amount.sub(game.upgrades.chance);
-			game.upgrades.chance.mul(10);
-			game.replicanti.chance.add(1);
+			game.replicanti.amount = game.replicanti.amount.sub(game.upgrades.chance);
+			game.upgrades.chance = game.upgrades.chance.mul(10);
+			game.replicanti.chance = game.replicanti.chance.add(1);
 			game.updateHTML();
 		}
 	}
@@ -58,8 +58,8 @@ game.upgrades.chancePriceDisplay.onclick = function(){
 
 game.upgrades.tickspeedPriceDisplay.onclick = function(){
 	if(game.replicanti.amount.gt(game.upgrades.tickspeed)){
-		game.replicanti.amount.sub(game.upgrades.tickspeed);
-		game.upgrades.tickspeed.mul(10);
+		game.replicanti.amount = game.replicanti.amount.sub(game.upgrades.tickspeed);
+		game.upgrades.tickspeed = game.upgrades.tickspeed.mul(10);
 		clearInterval(gameLoop)
 		game.replicanti.tickspeed = (game.replicanti.tickspeed.div(100)).mul(90);
 		game.updateHTML();
