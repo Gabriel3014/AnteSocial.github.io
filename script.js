@@ -33,7 +33,7 @@ var game = {
 		} else if(game.replicanti.amount.gt(100)) {
 			let x = 0
 			for(i=0;i<100;i++){
-				if(game.replicanti.chance.gt(Math.random()*100){
+				if(game.replicanti.chance.gt(Math.random()*100)){
 					x++
 				}
 			}
