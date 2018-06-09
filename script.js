@@ -1,5 +1,4 @@
 function a(id){return document.getElementById(id)};
-function b(id){return document.getElementsByClassName(id)};
 var game = {
 	replicanti: {
 		display: a("replicanti"),
@@ -22,7 +21,7 @@ var game = {
 		game.upgrades.chancePriceDisplay.innerHTML = formatValue(game.replicanti.notation, game.upgrades.chance, 2, 0) + " replicanti";
 		game.upgrades.tickspeedDisplay.innerHTML = "Tickspeed: " + formatValue(game.replicanti.notation, game.replicanti.tickspeed, 2, 0);
 		game.upgrades.tickspeedPriceDisplay.innerHTML = formatValue(game.replicanti.notation, game.upgrades.tickspeed, 2, 0) + " replicanti";
-		b("footer").innerHTML = "Notation : " + game.replicanti.notation;
+		a("footer").innerHTML = "Notation : " + game.replicanti.notation;
 	},
 	replicantiUpdate: function(){
 		game.updateHTML()
@@ -70,7 +69,7 @@ game.upgrades.tickspeedPriceDisplay.onclick = function(){
 	}
 }
 
-b("footer").onclick = function(){
+a("footer").onclick = function(){
 	if(game.replicanti.notation == "Standard"){
 		game.replicanti.notation = "Mixed Scientific";
 		game.updateHTML();
