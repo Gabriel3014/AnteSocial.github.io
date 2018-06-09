@@ -15,7 +15,7 @@ var game = {
 		tickspeedPriceDisplay: a("tickspeed_price")
 	},
 	updateHTML: function(){
-		game.replicanti.display.innerHTML = formatValue("Standard", game.replicanti.amount, 2, 0) + " ";
+		game.replicanti.display.innerHTML = formatValue("Standard", game.replicanti.amount, 0, 0) + " ";
 		game.upgrades.chanceDisplay.innerHTML = "Replicate Chance: " + formatValue("Standard", game.replicanti.chance, 2, 0) + "%";
 		game.upgrades.chancePriceDisplay.innerHTML = formatValue("Standard", game.upgrades.chance, 2, 0) + " replicanti";
 		game.upgrades.tickspeedDisplay.innerHTML = "Tickspeed: " + formatValue("Standard", game.replicanti.tickspeed, 2, 0);
