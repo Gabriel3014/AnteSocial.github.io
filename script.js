@@ -1,10 +1,12 @@
 function a(id){return document.getElementById(id)};
+function b(id){return document.getElementByClassName(id)};
 var game = {
 	replicanti: {
 		display: a("replicanti"),
 		amount: new Decimal(1),
 		chance: new Decimal(10),
 		tickspeed: new Decimal(1000),
+		notation: "Standard"
 	},
 	upgrades: {
 		chance: new Decimal(1000),
@@ -15,11 +17,12 @@ var game = {
 		tickspeedPriceDisplay: a("tickspeed_price")
 	},
 	updateHTML: function(){
-		game.replicanti.display.innerHTML = formatValue("Standard", game.replicanti.amount, 2, 0) + " ";
-		game.upgrades.chanceDisplay.innerHTML = "Replicate Chance: " + formatValue("Standard", game.replicanti.chance, 2, 0) + "%";
-		game.upgrades.chancePriceDisplay.innerHTML = formatValue("Standard", game.upgrades.chance, 2, 0) + " replicanti";
-		game.upgrades.tickspeedDisplay.innerHTML = "Tickspeed: " + formatValue("Standard", game.replicanti.tickspeed, 2, 0);
-		game.upgrades.tickspeedPriceDisplay.innerHTML = formatValue("Standard", game.upgrades.tickspeed, 2, 0) + " replicanti";
+		game.replicanti.display.innerHTML = formatValue(game.replicanti.notation, game.replicanti.amount, 2, 0) + " ";
+		game.upgrades.chanceDisplay.innerHTML = "Replicate Chance: " + formatValue(game.replicanti.notation, game.replicanti.chance, 2, 0) + "%";
+		game.upgrades.chancePriceDisplay.innerHTML = formatValue(game.replicanti.notation, game.upgrades.chance, 2, 0) + " replicanti";
+		game.upgrades.tickspeedDisplay.innerHTML = "Tickspeed: " + formatValue(game.replicanti.notation, game.replicanti.tickspeed, 2, 0);
+		game.upgrades.tickspeedPriceDisplay.innerHTML = formatValue(game.replicanti.notation, game.upgrades.tickspeed, 2, 0) + " replicanti";
+		b("footer").innerHTML = "Notation : " + game.replicanti.notation;
 	},
 	replicantiUpdate: function(){
 		game.updateHTML()
@@ -66,3 +69,17 @@ game.upgrades.tickspeedPriceDisplay.onclick = function(){
 		gameLoop = window.setInterval(game.replicantiUpdate, game.replicanti.tickspeed)
 	}
 }
+
+b("footer").onclick = function(){
+	if(game.replicanti.notation = "Standard"){
+		game.replicanti.notation = "Mixed Scientific";
+		game.updateHTML();
+	else if(game.replicanti.notation = "Mixed Scientific"){
+		game.replicanti.notation = "Scientific";
+		game.updateHTML();
+	} else if(game.replicanti.notation = "Scientific"){
+		game.replicanti.notation = "Standard"
+		game.updateHTML();
+	}
+}
+
